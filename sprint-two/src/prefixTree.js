@@ -34,7 +34,6 @@ T9PrefixTreeMethods.insert = function(word){
   if (mappedChars.length === 0){
     return;
   }
- // var characters = word.split('');
   var currentNode = this._baseTree;
   for (var i = 0; i < mappedChars.length; i++){
     if (currentNode.children[mappedChars[i]] === undefined){
@@ -67,6 +66,13 @@ T9PrefixTreeMethods.lookup = function(value){
     }
   }
   return results;
+};
+
+T9PrefixTreeMethods._loadFromFile = function(path){
+  for (var i = 0; i < words.length; i++){
+    this.insert(words[i]);
+  }
+  console.log(words.length, "words loaded!");
 };
 
 T9PrefixTreeMethods._mapT9 = function(word){

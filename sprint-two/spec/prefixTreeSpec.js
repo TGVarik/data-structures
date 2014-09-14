@@ -32,4 +32,8 @@ describe('prefixTree', function() {
     tree.insert('lite');
     expect(tree.lookup(5483)).to.deep.equal(['kite', 'lite']);
   });
+  it('should load words from a file', function(){
+    tree._loadFromFile('file:///Users/HR10/Desktop/2014-09-data-structures/sprint-two/res/words-1k-digest');
+    expect(tree.lookup(94424)).to.include('which');
+  })
 });
