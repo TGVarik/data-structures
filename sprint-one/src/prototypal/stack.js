@@ -1,11 +1,11 @@
 var makeStack = function() {
   // Hey! Rewrite in the new style. Your code will wind up looking very similar,
   // but try not not reference your old code in writing the new style.
-  var que = Object.create(stackMethods);
-  que.len = 0;
-  que.storage = {};
+  var queue = Object.create(stackMethods);
+  queue.len = 0;
+  queue.storage = {};
 
-  return que;
+  return queue;
 };
 
 var stackMethods = {};
